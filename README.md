@@ -6,28 +6,29 @@ projeto feito para consolidar conhecimentos em API REST e Spring
 
 ```mermaid
 classDiagram
-    class Cliente {
-        -String nome
+    class Client {
+        -String name
         -String email
         -String cpf
-        -String telefone
-        -String dataDeNascimento
+        -String phone
+        -String birthDate
     }
 
-    class Conta {
-        -String agencia
-        -String conta
-        -Float saldo
-        -Float limiteDeCredito
-        -String estadoDaConta
+    class Account {
+        -String agency
+        -String accountNumber
+        -BigDecimal balance
+        -BigDecimal creditLimit
+        -String accountStatus
     }
 
-    class Cartao {
-        -String numero
-        -Float limite
+    class Card {
+        -String number
+        -BigDecimal limit
     }
 
-    Cliente "1" *-- "1" Conta 
-    Cliente "1" *-- "1" Cartao 
+    Client "1" *-- "1" Account 
+    Client "1" *-- "1" Card
+
 
 ```
