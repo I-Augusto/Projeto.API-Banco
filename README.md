@@ -6,6 +6,13 @@ projeto feito para consolidar conhecimentos em API REST e Spring
 
 ```mermaid
 classDiagram
+
+    class User {
+        -Client client
+        -Account account
+        -Card card
+    }
+
     class Client {
         -String name
         -String email
@@ -27,8 +34,9 @@ classDiagram
         -BigDecimal limit
     }
 
-    Client "1" *-- "1" Account 
-    Client "1" *-- "1" Card
+    User "1" *-- "1" Account 
+    User "1" *-- "1" Card
+    User "1" *-- "1" Client
 
 
 ```
