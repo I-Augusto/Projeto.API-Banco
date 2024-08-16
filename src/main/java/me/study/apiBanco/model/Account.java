@@ -18,7 +18,7 @@ public class Account {
 	private String agency;
 	
 	@Column(unique = true)
-	private String accountNumber;
+	private String number;
 
 	@Column(precision = 13, scale = 2)
 	private BigDecimal balance;
@@ -40,11 +40,11 @@ public class Account {
 	public void setAgency(String agency) {
 		this.agency = agency;
 	}
-	public String getAccountNumber() {
-		return accountNumber;
+	public String getNumber() {
+		return number;
 	}
-	public void setAccountNumber(String accountNumber) {
-		this.accountNumber = accountNumber;
+	public void setNumber(String accountNumber) {
+		this.number = accountNumber;
 	}
 	public BigDecimal getBalance() {
 		return balance;
