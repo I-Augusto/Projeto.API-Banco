@@ -9,4 +9,6 @@ import me.study.apiBanco.model.User;
 public interface UserRepository extends JpaRepository<User, Long>{
 	
 	boolean existsByClientCpf(String ClientCpf);
+	boolean existsByAccountNumber(String AccountNumber);
+	boolean existsByCardNumber(String CardNumber);
 }
