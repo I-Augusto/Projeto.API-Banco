@@ -41,17 +41,35 @@ classDiagram
 
 ```
 ## Como usar
-Para vizualizar o uso da API é possivel realizar isso da seguinte forma:
-* Abra o Link: http://localhost:8080/h2-console
-* Confirme os seguintes dados:
+Para vizualizar o uso da API é possivel realizar isso das seguintes formas:
+### Por meio do H2-Console (A memória dele é temporaria, então quando o programa for fechado todos os dados serão deletados)
+1. Na IDE Altere a Run Configuration para que tenha:
+   * Variable: SPRING_PROFILES_ACTIVE
+   * Value: dev
+2. Abra o Link: http://localhost:8080/h2-console
+3. Confirme os seguintes dados:
     * JDBC URL: jdbc:h2:mem:bancoapi
     * User name: bancoapi
-* Abra o Link: http://localhost:8080/swagger-ui/index.html
-* Para utilizar o swagger siga os passos em [Exemplos para os usos do Swagger](#exemplos-para-os-usos-do-swagger)
+4. Abra o Link: http://localhost:8080/swagger-ui/index.html
+5. Para utilizar o swagger siga os passos em [Exemplos para os usos do Swagger](#exemplos-para-os-usos-do-swagger)
     * [POST](#post)
     * [GET](#get)
-* Com tudo feito já é possivel utilizar os métodos e monitorar o banco de dados no H2 (A memória dele é temporaria, então quando o programa for fechado todos os dados serão deletados)
+6. Com tudo feito já é possivel utilizar os métodos e monitorar o banco de dados no H2
 
+### Por meio de um banco de dados local (Foi utilizado o XAMPP)
+1. Na IDE Altere a Run Configuration para que tenha:
+   * Variable: SPRING_PROFILES_ACTIVE
+   * Value: prd
+2. Inicie o banco de dados local
+3. confirme no banco de dados as seguintes informações
+   * Existência do banco de dados "test"
+   * Confirme se o username é "root"
+   * Confirme se não existe senha
+4. Abra o Link: http://localhost:8080/swagger-ui/index.html
+5. Para utilizar o swagger siga os passos em [Exemplos para os usos do Swagger](#exemplos-para-os-usos-do-swagger)
+    * [POST](#post)
+    * [GET](#get)
+6. Com tudo feito já é possivel utilizar os métodos e monitorar o banco de dados
 
 ## Exemplos para os usos do Swagger
 
